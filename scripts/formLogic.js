@@ -1,4 +1,4 @@
-import CONFIG from 'config.js';
+import CONFIG from './config.js';
 
 const success = document.querySelectorAll('.form-success');
 const failure = document.querySelectorAll('.form-fail');
