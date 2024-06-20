@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/SO3.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <title>StickOn</title>
+    <style>
+        *,*:before,*:after{
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f5f7fb;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 100%;
+            height: 4rem;
+            background-color: white;
+        }
+        .navbar{
+            padding:0.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo{
+            width: 13%;
+        }
+
+        .back-to-home{
+            text-decoration: none;
+            color: black;
+            transition: all 0.2s linear;
+        }
+        .back-to-home:hover{
+            color: #c93357;
+            transform: scale(1.1);
+        }
+        .back-to-home i{
+            color: #c93357;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 5rem 0;
+        }
+
+        .container-left{
+            max-width: 600px;
+            padding: 1rem 2rem;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 1.5rem 0;
+            text-align: center;
+            color: #007bff;
+        }
+        .form-group{
+            margin-bottom: 3rem;
+        }
+        .form-group label {
+            display: block;
+        }
+        .label-heading{
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-control:focus{
+            outline: none;
+            border-color: #007bff;
+        }
+
+        .other-service{
+            display: none;
+            width: 100%;
+            padding: 10px;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .other-service:focus{
+            outline: none;
+            border-color: #007bff;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .form-col {
+            flex: 1;
+            min-width: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        input[type="checkbox"]{
+            height: 0;
+            width: 0;
+            display: none;
+        }
+        .clabel{
+            background-color: white;
+            border: 1px solid rgba(196, 199, 206, 1);
+            border-radius: 10px;
+            padding: 0.5rem 0.8rem;
+            cursor: pointer;
+        }
+
+        .clabel:hover{
+            color: #007bff;
+            border: 1px solid #007bff;
+        }
+
+        input[type="checkbox"]:checked + .clabel{
+            background-color: #007bff;
+            color: white;
+            border: 2px solid rgb(0, 132, 255);
+        }
+
+
+        .form-success, .form-fail{
+            display: none;
+            color: #6270ea;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .form-success{
+            color: #6270ea;
+        }
+
+        .form-fail{
+            color: #ea7462;
+        }
+        .btn-container{
+            display: flex;
+            justify-content: center;
+        }
+        .submit-btn{
+            cursor:pointer;
+            background-color: #c93357;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+            border-radius: 6px;
+            border: 1px solid #DA3960;
+            padding: 0.5rem 1.5rem;
+            transition: all 0.2s linear;
+        }
+
+        .container-right{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            row-gap: 2rem;
+        }
+        .container-right h2{
+            color: #c93357;
+        }
+        .contact-card{
+            max-width: 400px;
+            width:100%;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .mail a{
+            text-decoration: none;
+            color: #007bff;
+        }
+        .mobno{
+            color: #c93357;
+        }
+
+
+
+        @media (max-width: 768px) {
+            .form-wrapper {
+                padding: 10px;
+            }
+
+            .form-title {
+                font-size: 20px;
+            }
+
+            .checkbox-label {
+                margin: 5px 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <img src="./assets/SO_Main.png" alt="logo" class="logo">
+            <a href="javascript: history.go(-1)" class="back-to-home"><i class="fa-solid fa-arrow-left"></i>&nbsp;&nbsp;Back to Home</a>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="container-left">
+            <div class="form-wrapper">
+                <h2 class="form-title">Request for Project Proposal</h2>
+                <form id="projectForm" name="projectForm" class="projectForm">
+                    <input type="hidden" name="formType" value="Project Form">
+                    <div class="form-group">
+                        <label class="label-heading">1. Tell us about you and your project</label>
+                        <input type="text" class="form-control" placeholder="Full Name *" name="name" required>
+                        <input type="email" class="form-control" placeholder="Email *" name="email" required>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <select class="form-control" name="country_code">
+                                    <option>IN (+91)</option>
+                                    <!-- Add other country codes as needed -->
+                                </select>
+                            </div>
+                            <div class="form-col">
+                                <input type="text" class="form-control" placeholder="Mobile Phone Number *" name="mobile_number" required>
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Company Name" name="company_name">
+                        <input type="text" class="form-control" placeholder="Share reference links or name." name="reference_links">
+                        <textarea class="form-control" placeholder="Share brief about your project requirement *" name="project_requirements" required></textarea>
+                        <div class="form-row">
+                            <div class="form-col">
+                                <select class="form-control" name="budget" required>
+                                    <option>Budget *</option>
+                                    <option value="less than $1,000">Less than $1,000</option>
+                                    <option value="$1,000 to $5,000">$1,000 to $5,000</option>
+                                    <option value="$5,000+">$5,000+</option>
+                                </select>
+                            </div>
+                            <div class="form-col">
+                                <select class="form-control" name="business_category" required>
+                                    <option>Your Business Categorizes *</option>
+                                    <option value="startup">Startup</option>
+                                    <option value="sme">SME</option>
+                                    <option value="enterprise">Enterprise</option>
+                                    <option value="agency">Agency</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="label-heading">2. What Services You are Looking For? *</label>
+                        <div class="checkbox-group">
+
+                            <input type="checkbox" id="webapp" name="services1" value="Web App">
+                            <label for="webapp" class="clabel">Web App</label>
+                            
+                            <input type="checkbox" id="mobileapp" name="services2" value="Mobile App">
+                            <label for="mobileapp" class="clabel">Mobile App</label>
+
+                            <input type="checkbox" id="uiux" name="services3" value="UI/UX">
+                            <label for="uiux" class="clabel">UI/UX</label>
+
+                            <input type="checkbox" id="itconsulting" name="services4" value="IT Consulting">
+                            <label for="itconsulting" class="clabel">IT consulting</label>
+
+                            <input type="checkbox" id="backend-development" name="services5" value="Back-End Development">
+                            <label for="backend-development" class="clabel">Back-End Development</label>
+
+                            <input type="checkbox" id="api-development" name="services6" value="API Development">
+                            <label for="api-development" class="clabel">API Development</label>
+
+                            <input type="checkbox" id="software-testing" name="services7" value="Software Testing">
+                            <label for="software-testing" class="clabel">Software Testing</label>
+
+                            <input type="checkbox" id="other" name="Other Service" value="Other">
+                            <label for="other" class="clabel">Other</label>
+
+                        </div>
+                        <input type="text" name="Other Service Name" placeholder="Please specify the domain" class="other-service">
+                    </div>
+                    <div class="form-success" tabindex="-1" role="region">
+                        <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="form-fail" tabindex="-1" role="region">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                    <div class="btn-container">
+                        <input type="submit" class="submit-btn">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-right" data-aos="fade-in">
+            <h2>Other ways to get in touch with us!</h2>
+            <div class="contact-card">
+                <h3>Project Request</h3>
+                <p>Mail us your project requirement and get the free quote</p><br>
+                <span class="mail">
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSqVrkPCWBqjzQPcmtcqJLwLdGSWGQGNBVmmHhVZGCnchfvWBZslBvnKkclWVjHBvLsbCP">
+                        <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;haribabu.p@stickon.tech</a><br>
+                        <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcRwRrnXtvkDsrNzkkLtTbgTQtfptKpwWjwpLsShhdsqnRgbpPCvfmGDwzfdBbmvcZSnsVXGb">
+                            <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;ghayaz.shaik@stickon.tech</a></a>
+                    </span>
+                <br><br>
+                <span class="mobno"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91-99636 22496</span>
+            </div>
+            <div class="contact-card">
+                <h3>Apply for Job</h3>
+                <p>We're looking for problem solvers. Come and join our team</p><br>
+                <span class="mail">
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSqVrkPCWBqjzQPcmtcqJLwLdGSWGQGNBVmmHhVZGCnchfvWBZslBvnKkclWVjHBvLsbCP">
+                    <i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;venkatesh.p@stickon.tech
+                    </a>
+                </span>
+                <br><br>
+                <span class="mobno"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91-89780 61097</span>
+            </div>
+            <div class="contact-card">
+                <h3>Further Queries</h3>
+                <p>Let's have a chat! Call us at</p><br>
+                <span class="mobno"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91-9052530123</span>
+                <br><br>
+                <span class="mobno"><i class="fa-solid fa-phone"></i>&nbsp;&nbsp;+91-89780 61097</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('.checkbox-label input').forEach(input => {
+            input.addEventListener('change', function() {
+                if (this.checked) {
+                    this.parentNode.classList.add('category-active');
+                } else {
+                    this.parentNode.classList.remove('category-active');
+                }
+            });
+        });
+
+        other = document.getElementById("other");
+        otherServiceInpt = document.querySelector(".other-service");
+        other.addEventListener("click",function() {
+            other.checked == true ? otherServiceInpt.style.display="block" : otherServiceInpt.style.display="none";
+        });
+    </script>
+    <script src="../scripts/formLogic.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
