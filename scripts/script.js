@@ -10,6 +10,9 @@ const phasesLeft = document.querySelector(".phases-left");
 const phases = document.querySelectorAll(".phases-left span");
 const phasesContent = document.querySelectorAll(".phases-right .phase-container");
 
+if(screen.width < 1024){
+    menuBtn.style.display="block";
+}
 window.addEventListener("resize", ()=>{
     let screenWidth = screen.width;
     if(screenWidth >= 1024){
