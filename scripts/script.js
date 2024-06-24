@@ -4,6 +4,7 @@
 const menuBtn = document.querySelector(".menu-icon span");
 const cancelBtn = document.querySelector(".cancel-icon span");
 const items = document.querySelector(".nav-items");
+const menuList = document.querySelectorAll(".nav-items li a");
 
 //Phases
 const phasesLeft = document.querySelector(".phases-left");
@@ -42,6 +43,11 @@ cancelBtn.onclick = ()=> {
     cancelBtn.style.color = "#ff3d00";
 }
 
+menuList.forEach(menuItem => {
+    menuItem.addEventListener("click",function(){
+        items.classList.remove("active");
+    })
+})
 
 const subscribeForm = document.getElementById("subscribe-form");
 
