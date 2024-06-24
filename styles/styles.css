@@ -1207,6 +1207,11 @@ footer{
     width: 55%;
   }
 
+  .visit-us-card{
+    max-width: 420px;
+    padding: 2.5rem;
+  }
+
   .fc1 img{
     width: 65%;
   }
@@ -1322,6 +1327,14 @@ footer{
   }
   .c2{
     width: 90%;
+  }
+
+  .visit-us-card{
+    max-width: 390px;
+    padding: 2rem;
+  }
+  .visit-us-card h2{
+    font-size: 35px;
   }
 
   .footer-top{
@@ -1443,6 +1456,24 @@ footer{
   .ratings{
     width: 70%;
   }
+
+  .visit-us-card{
+    max-width: 300px;
+    padding: 2rem;
+  }
+  .visit-us-card h2{
+    font-size: 28px;
+  }
+  .visit-us-card p{
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+  }
+  .contact-details{
+    margin: 0;
+  }
+  .contact-details a:last-child{
+    margin-bottom: 1rem;
+  }
 }
 
 @media(max-width: 500px){
@@ -1486,6 +1517,34 @@ footer{
     padding: 1.5rem;
   }
 
+  .subscribe-tag{
+    width: 40%;
+  }
+
+  .visit-us-card{
+    max-width: 200px;
+    padding: 1rem;
+  }
+  .visit-us-card h2{
+    font-size: 20px;
+  }
+  .visit-us-card p{
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+  .contact-details{
+    margin: 0;
+    font-size: 10px;
+    row-gap: 0.4rem;
+  }
+  .contact-details a:last-child{
+    margin-bottom: 1rem;
+  }
+  .visit-us-btn{
+    font-size: 0.5rem;
+    padding: 0 3rem;
+  }
+
 }
 
 @media (max-width: 400px){
@@ -1525,6 +1584,9 @@ footer{
     font-size: 1rem;
     line-height: 1.5rem;
   }
+  .check .check-logo {
+    width: 25%;
+  }
 
   .features-top h2{
     width: 100%;
@@ -1533,10 +1595,10 @@ footer{
     width: 20vw;
   }
   .node-content h3{
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .node-content p{
-    font-size: 0.5rem;
+    font-size: 0.7rem;
     line-height: 1rem;
   }
 
@@ -1557,5 +1619,12 @@ footer{
   }
   .rating-img{
     width: 40%;
+  }
+
+  .c2{
+    width: 100%;
+  }
+  .form-container{
+    padding: 0.8rem;
   }
 }
