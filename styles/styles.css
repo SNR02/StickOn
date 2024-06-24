@@ -98,13 +98,13 @@ nav .nav-items li a:hover{
 }
 nav .menu-icon span,
 nav .cancel-icon span{
+  display: none;
   width: 40px;
   text-align: center;
   margin: 0 50px;
   font-size: 18px;
   color: #c93357;
   cursor: pointer;
-  display: none;
 }
 
 .quote-btn a{
@@ -233,41 +233,45 @@ nav .cancel-icon span{
 }
 
 .cu-s3{
-  align-items: center;
   display: flex;
+  align-items: baseline;
   grid-column-gap: 75px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 
 .cu-s3-card {
   text-align: center;
-  width: 100%;
-  max-width: 258px;
+  width: 25%;
 }
 
 .image-block {
   background-color: #fff;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  max-width: 120px;
+  width: 120px;
   height: 120px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   position: relative;
   box-shadow: 0 0 30px rgba(226, 226, 226, .5);
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .image-block-inner {
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
-  display: flex;
-  position: relative;
+  width: 62%;
+  height: 62%;
   border-radius: 16px;
+}
+
+.image-block-inner i{
+  color: white;
+  font-size: 2rem;
 }
 
 .card-border {
@@ -309,10 +313,10 @@ nav .cancel-icon span{
   justify-content: space-between;
 }
 .about-image{
-  padding: 3rem 5rem;
+  padding: 2rem;
 }
 .about-image img{
-  width: 35vw;
+  width: 40vw;
   animation: floatImage 4s ease-in-out infinite;
   border-radius: 20px;
 }
@@ -326,13 +330,6 @@ nav .cancel-icon span{
 }
 .sec-heading{
   font-size: 2.5rem;
-  font-size: 600;
-}
-.about-buttons{
-  width: 30%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .check{
@@ -351,11 +348,12 @@ nav .cancel-icon span{
 /*-----------Features--------------*/
 .features{
   width: 100%;
+  height: auto;
   margin: 10rem 0;
   background-image: url(../assets/features-glow.png);
   background-position: 50% 0;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   padding-left: 15px;
   padding-right: 15px;
 }
@@ -436,11 +434,16 @@ nav .cancel-icon span{
   display: flex;
   justify-content: space-evenly;
   width: 100%;
-  height:70%
 }
 .phases-left{
   width:25%;
   border-left: 1px solid #C3C3C3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.phases-left,.phases-right{
+  height: 100%;
 }
 
 .phase{
@@ -474,8 +477,10 @@ nav .cancel-icon span{
   height: 100%;
 }
 .phase-container.phase-container-active{
-  display: block;
   transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .phase-container img{
@@ -521,7 +526,7 @@ nav .cancel-icon span{
   font-size: 1rem;
   font-weight: 600;
   border-radius: 20px;
-  width: 50%;
+  width: 55%;
   line-height: 2rem;
   padding: 0 1rem;
   justify-content: center;
@@ -543,19 +548,22 @@ nav .cancel-icon span{
 }
 
 .ratings{
+  width: 90%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  width: 80%;
+  align-items: center;
 }
-
+.ratings-img,.starts-text{
+  width: 50%;
+}
 .rating-count{
-    color: var(--dim-grey);
-    letter-spacing: .01rem;
-    font-family: Urbanist, sans-serif;
-    font-size: 1.125rem;
-    font-weight: 500;
-    line-height: 1.875rem;
+  display: flex;
+  flex-direction: column;
+  letter-spacing: .01rem;
+  font-family: Urbanist, sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.875rem;
 }
 
 
@@ -873,13 +881,14 @@ nav .cancel-icon span{
 
 footer{
   width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .footer-top{
   width: 90%;
-  margin: 0 auto;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  align-items: center;
+  justify-content: space-between;
   padding: 4rem 0;
 }
 
@@ -895,9 +904,13 @@ footer{
   width: 75%;
   margin-bottom: 1rem;
 }
+.fc1 p{
+  text-align: justify;
+  font-size: 1rem;
+}
 
 .quote-btn2{
-  width: 35%;
+  width: 150px;
   text-align: center;
   align-self: flex-start;
   border-radius: 6px;
@@ -953,7 +966,19 @@ footer{
   color: #0067f7;
 }
 
+.mapouter{
+  position: relative;
+  text-align: right;
+  height: 246px;
+  width: 100%;
+}
 
+.gmap_canvas{
+  overflow: hidden;
+  background: none !important;
+  height: 246px;
+  width: 100%;
+}
 
 
 
@@ -983,15 +1008,128 @@ footer{
   }
 }
 
+@keyframes floatImage {
+  0%{
+      transform: translateY(0);
+  }
+  50%{
+      transform: translateY(-2.4rem);
+  }
+  100%{
+      transform: translateY(0);
+  }
+}
+
+@media (max-width : 1500px){
+  .home-right img{
+    width: 46vw;
+  }
+  .home-left .main-content{
+    font-size: 3rem;
+  }
+}
+@media (max-width : 1433px){
+  .home-left .main-content{
+    font-size: 2.5rem;
+    line-height: 2.8rem;
+  }
+  .about-page{
+    padding-top: 4.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-image img{
+      margin-top: 2rem;
+      width: 70vw;
+  }
+  .about-content{
+      width: 80%;
+      padding-top: 2rem;
+  }
+  .check{
+    width: 100%;
+  }
+  .check .check-logo{
+    width: 5%;
+  }
+  .check-logo img{
+    width: 60%;
+    margin-top: -0.5rem;
+  }
+
+  .c1-tag{
+    width: 60%;
+  }
+  .ratings-img{
+    width: 40%;
+  }
+  
+}
+
 @media (max-width: 1245px) {
   nav{
     padding: 0 50px;
   }
-}
-@media (max-width: 1140px){
-  nav{
-    padding: 0px;
+  .home{
+    height: auto;
+    padding: 8rem 5rem;
   }
+  .home-left .main-content{
+    font-size: 2rem;
+    line-height: 2.7rem;
+  }
+  .home-left ,main-subtext{
+    font-size: 1rem;
+  }
+  .home-right img{
+    width: 40vw;
+  }
+
+  .card-border {
+    left: 115%;
+  }
+
+  .check .check-logo {
+    width: 7%;
+  }
+
+  .node-content{
+    width: 65%;
+  }
+  .node-content h3{
+    font-size: 1rem;
+  }
+  .node-content p{
+    font-size:0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .work-container{
+    width: 80%;
+  }
+
+  .c1-tag{
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  .c1 h2{
+    max-width: 90%;
+  }
+  .ratings{
+    width: 100%;
+  }
+  .rating-count{
+    font-size: 1rem;
+  }
+
+  .fc1 img{
+    width: 70%;
+  }
+  .fc1 p{
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 1024px){
   nav .logo{
     flex: 2;
     text-align: center;
@@ -1002,7 +1140,7 @@ footer{
     top: 70px;
     width: 100%;
     left: -100%;
-    height: 40%;
+    height: 50%;
     padding: 10px 50px 0 50px;
     text-align: center;
     background: #ffffff;
@@ -1020,20 +1158,404 @@ footer{
   nav .nav-items li a{
     font-size: 20px;
   }
-  nav .menu-icon span{
-    display: block;
+
+  .home-page{
+    flex-direction: column-reverse;
+  }
+
+  .home-left{
+    width: 80%;
+    margin-top: 2.5rem;
+  }
+
+  .home-left .main-content{
+    font-size: 3rem;
+    line-height: 3.2rem;
+  }
+
+
+  .home-right img{
+    width: 70vw;
+  }
+
+  .card-border {
+    left: 95%;
+  }
+
+  .check .check-logo {
+    width: 10%;
+  }
+
+  .phase{
+    font-size: 1.2rem;
+  }
+  .phases-right{
+    width: 70%;
+  }
+
+  .c1-tag{
+    width: 75%;
+    font-size: 0.9rem;
+  }
+  .c1 h2{
+    max-width: 95%;
+  }
+  .rating-count{
+    font-size: 0.9rem;
+  }
+  .c2{
+    width: 55%;
+  }
+
+  .fc1 img{
+    width: 65%;
+  }
+  .fc1 p{
+    line-height: 1.2rem;
+  }
+
+  .fc2{
+    width: 25%;
+  }
+
+
+}
+
+@media (max-width: 900px){
+
+  nav{
+    padding: 0 1rem;
+  }
+  nav .menu-icon span,
+  nav .cancel-icon span{
+    margin: 0;
+  } 
+
+  .home{
+    padding: 8rem 0;
+  }
+  .home-left .main-content{
+    font-size: 2.2rem;
+    line-height: 2.7rem;
+    text-align: center;
+  }
+  .home-left .main-subtext{
+    text-align: center;
+  }
+  .home-left a{
+    align-self: center;
+  }
+
+  .choose-us{
+    height: auto;
+  }
+  .cu-s1{
+    margin: 4rem 0;
+  }
+  .cu-s3{
+    padding: 3rem 0;
+    flex-wrap: wrap; 
+    justify-content: center;
+    row-gap:2rem;
+  }
+  .cu-s3-card{
+    width: 40%;
+  }
+  .card-border{
+    display: none;
+  }
+
+  .about{
+    padding: 1rem 0;
+  }
+  .about-content{
+    width: 90%;
+    padding-top: 1rem;
+  }
+
+  .features-top h2{
+    width: 80%;
+  }
+  .grid-container{
+    flex-direction: column;
+    grid-row-gap: 3rem;
+  }
+  .grid-node{
+    width: 90%;
+  }
+  .node-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .node-content h3{
+    font-size: 1.5rem;
+  }
+  .node-content p{
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+
+  .phase {
+    font-size: 1rem;
+  }
+
+  .contact-wrapper{
+    flex-direction: column;
+    height: auto;
+  }
+  .c1{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+  .c1 p{
+    text-align: center;
+  }
+  .c1-tag{
+    width: 40%;
+  }
+  .ratings{
+    width: 50%;
+  }
+  .c2{
+    width: 90%;
+  }
+
+  .footer-top{
+    flex-direction: column;
+  }
+  .fc{
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+  .fc1 img{
+    width: 40vw;
+  }
+  .fc1 p{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  .fc2 ul{
+    flex-direction: row;
   }
 }
 
-@media (max-width: 980px){
-  nav form{
-    right: 30px;
+@media (max-width:780px){
+  .home-left .main-content{
+    font-size: 2rem;
+  }
+  .home-left .main-subtext{
+    font-size: 1.2rem;
+  }
+  .home-right img,
+  .about-image img{
+    width: 80vw;
+  }
+
+  .check .check-logo{
+    width: 13%;
+  }
+
+
+
+  .work{
+    height: auto;
+  }
+  .work-container h2{
+    font-size: 2.8rem ;
+  }
+  .phases-left{
+    display: none;
+  }
+  .phases-right{
+    width: 90%;
+  }
+  .phase-container{
+    display: block;
+    margin-bottom: 3rem;
+  }
+  .phase-container h4{
+    text-align: center;
+  }
+
+  .contact-container{
+    max-width: 95%;
+  }
+  .c1{
+    width: 85%;
+  }
+  .c1 h2{
+    text-align: center;
+  }
+  .c1-tag{
+    width: 60%;
+    font-size: 1rem;
+  }
+  .ratings{
+    width: 60%;
+  }
+  .ratings-img{
+    width: 43%;
   }
 }
-@media (max-width: 350px){
-  nav .menu-icon,
-  nav .cancel-icon{
-    margin: 0 10px;
-    font-size: 16px;
+@media(max-width: 600px){
+  .logo img{
+    width: 12rem;
+  }
+  .quote-btn{
+    display: none;
+  }
+
+  .check .check-logo{
+    width: 16%;
+  }
+
+  .cu-s2 h2{
+    text-align: center;
+  }
+  .cu-s3-card .text-block{
+    font-size: 1.1rem;
+  }
+  .cu-s3-card p{
+    font-size: 1rem;
+  }
+  
+  .grid-node{
+    width: 95%;
+  }
+  .grid-node img{
+    width: 20vw;
+  }
+  .node-content{
+    padding-left: 1rem;
+  }
+  .node-content h3{
+    font-size: 1.1rem;
+  }
+  .node-content p{
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .ratings{
+    width: 70%;
+  }
+}
+
+@media(max-width: 500px){
+  .home-left .main-content{
+    font-size: 1.7rem;
+  }
+  .sec-name{
+    display: block;
+    text-align: center;
+  }
+  .sec-heading{
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .check .check-logo{
+    width: 22%;
+  }
+
+  .grid-node{
+    width: 100%;
+    padding: 1.5rem;
+  }
+  .grid-node img{
+    width: 22vw;
+  }
+  .node-content{
+    padding-left: 1rem;
+  }
+  .node-content h3{
+    font-size: 0.9rem;
+  }
+  .node-content p{
+    font-size: 0.7rem;
+    line-height: 1.3rem;
+  }
+  .ratings{
+    width: 90%;
+  }
+
+  .form-container{
+    padding: 1.5rem;
+  }
+
+}
+
+@media (max-width: 400px){
+
+  .home-left .main-content{
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+  .home-left .main-subtext{
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+  }
+  .cu-s3{
+    padding: 2rem 0;
+  }
+  .cu-s3-card{
+    width: 100%;
+  }
+  .image-block{
+    width: 150px;
+    height: 150px;
+  }
+  .cu-s3-card .text-block{
+    font-size: 1.5rem;
+  }
+  .cu-s3-card p{
+    font-size: 1.2rem;
+  }
+
+  .sec-name{
+    margin-bottom: 2rem;
+  }
+  .sec-heading{
+    font-size: 1.4rem;
+  }
+  .about-content p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .features-top h2{
+    width: 100%;
+  }
+  .grid-node img{
+    width: 20vw;
+  }
+  .node-content h3{
+    font-size: 0.7rem;
+  }
+  .node-content p{
+    font-size: 0.5rem;
+    line-height: 1rem;
+  }
+
+  .work-container{
+    width: 95%;
+  }
+
+  .c1{
+    width: 95%;
+  }
+  .c1-tag{
+    width: 65%;
+    font-size: 0.7rem;
+  }
+  .c1 p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .rating-img{
+    width: 40%;
   }
 }

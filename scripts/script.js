@@ -4,6 +4,29 @@
 const menuBtn = document.querySelector(".menu-icon span");
 const cancelBtn = document.querySelector(".cancel-icon span");
 const items = document.querySelector(".nav-items");
+
+//Phases
+const phasesLeft = document.querySelector(".phases-left");
+const phases = document.querySelectorAll(".phases-left span");
+const phasesContent = document.querySelectorAll(".phases-right .phase-container");
+
+window.addEventListener("resize", ()=>{
+    let screenWidth = screen.width;
+    if(screenWidth >= 1024){
+        cancelBtn.style.display="none";
+        menuBtn.style.display="none";
+    }
+    else{
+        if(items.classList.contains("active")){
+            cancelBtn.style.display="block";
+            menuBtn.style.display="none"
+        }
+        else{
+            cancelBtn.style.display="none";
+            menuBtn.style.display="block";
+        }
+    }
+})
 menuBtn.onclick = ()=> {
     cancelBtn.style.display="block";
     menuBtn.style.display="none";
@@ -28,8 +51,8 @@ document.addEventListener("click",function(e){
     }
 })
 
-const phases = document.querySelectorAll(".phases-left span");
-const phasesContent = document.querySelectorAll(".phases-right .phase-container");
+
+
 
 let phaseMapper = new Map();
 let count=0;
