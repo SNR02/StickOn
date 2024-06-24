@@ -46,6 +46,8 @@ cancelBtn.onclick = ()=> {
 menuList.forEach(menuItem => {
     menuItem.addEventListener("click",function(){
         items.classList.remove("active");
+        menuBtn.style.display="block";
+        cancelBtn.style.display="none";
     })
 })
 
