@@ -1158,6 +1158,9 @@ footer{
   nav .nav-items li a{
     font-size: 20px;
   }
+  .menu-icon span{
+    display: block;
+  }
 
   .home-page{
     flex-direction: column-reverse;
