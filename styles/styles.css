@@ -1152,6 +1152,10 @@ footer{
   .footer-section{
     height: auto;
   }
+
+  .choose-us{
+    height: 50vh;
+  }
 }
 
 
