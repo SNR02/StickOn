@@ -1095,6 +1095,10 @@ footer{
     width: 40vw;
   }
 
+  .choose-us{
+    height: 50vh;
+  }
+
   .card-border {
     left: 115%;
   }
@@ -1151,10 +1155,6 @@ footer{
   .visit-us,
   .footer-section{
     height: auto;
-  }
-
-  .choose-us{
-    height: 50vh;
   }
 }
 
