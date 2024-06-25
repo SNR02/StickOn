@@ -1560,6 +1560,14 @@ footer{
     font-size: 0.9rem;
     line-height: 1.2rem;
   }
+  
+  .about-image {
+    padding: 0;
+  }
+  .about-image img{
+    width: 100vw;
+  }
+
   .cu-s3{
     padding: 2rem 0;
   }
