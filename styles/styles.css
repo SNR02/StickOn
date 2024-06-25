@@ -1067,11 +1067,21 @@ footer{
 }
 
 @media (max-width: 1245px) {
+  .static-nav,
+  .home,
+  .choose-us,
+  .about,
+  .features,
+  .work,
+  .contact,
+  .visit-us,
+  .footer-section{
+    height: auto;
+  }
   nav{
     padding: 0 50px;
   }
   .home{
-    height: auto;
     padding: 8rem 5rem;
   }
   .home-left .main-content{
@@ -1129,6 +1139,22 @@ footer{
     font-size: 0.8rem;
   }
 }
+
+@media only screen and (max-width: 1245px) and (orientation: landscape){
+  .static-nav,
+  .home,
+  .choose-us,
+  .about,
+  .features,
+  .work,
+  .contact,
+  .visit-us,
+  .footer-section{
+    height: auto;
+  }
+}
+
+
 @media (max-width: 1024px){
   nav .logo{
     flex: 2;
@@ -1230,18 +1256,6 @@ footer{
 }
 
 @media (max-width: 900px){
-
-  .static-nav,
-  .home,
-  .choose-us,
-  .about,
-  .features,
-  .work,
-  .contact,
-  .visit-us,
-  .footer-section{
-    height: auto;
-  }
 
   nav{
     padding: 0 1rem;
@@ -1367,19 +1381,7 @@ footer{
     flex-direction: row;
   }
 }
-@media only screen and (max-width: 900px) and (orientation: landscape){
-  .static-nav,
-  .home,
-  .choose-us,
-  .about,
-  .features,
-  .work,
-  .contact,
-  .visit-us,
-  .footer-section{
-    height: auto;
-  }
-}
+
 
 @media (max-width:780px){
   .home-left .main-content{
