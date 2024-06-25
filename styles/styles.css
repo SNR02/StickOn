@@ -1231,6 +1231,18 @@ footer{
 
 @media (max-width: 900px){
 
+  .static-nav,
+  .home,
+  .choose-us,
+  .about,
+  .features,
+  .work,
+  .contact,
+  .visit-us,
+  .footer-section{
+    height: auto;
+  }
+
   nav{
     padding: 0 1rem;
   }
@@ -1254,9 +1266,6 @@ footer{
     align-self: center;
   }
 
-  .choose-us{
-    height: auto;
-  }
   .cu-s1{
     margin: 4rem 0;
   }
@@ -1493,18 +1502,6 @@ footer{
 }
 
 @media(max-width: 500px){
-
-  .static-nav,
-  .home,
-  .choose-us,
-  .about,
-  .features,
-  .work,
-  .contact,
-  .visit-us,
-  .footer-section{
-    height: auto;
-  }
   .home-left .main-content{
     font-size: 1.7rem;
   }
