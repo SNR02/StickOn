@@ -210,6 +210,14 @@
             color: #c93357;
         }
 
+        @media(max-width : 1020px){
+            .container{
+                flex-direction: column;
+            }
+            .container-left{
+                margin-bottom: 5rem;
+            }
+        }
 
 
         @media (max-width: 768px) {
@@ -223,6 +231,58 @@
 
             .checkbox-label {
                 margin: 5px 0;
+            }
+        }
+
+        @media(max-width: 600px){
+            .container-left{
+                max-width: 500px;
+            }
+            .checkbox-group{
+                justify-content: space-evenly;
+            }
+            .clabel{
+                font-size: 0.7rem;
+                padding: 0.4rem 0.7rem;
+            }
+        }
+
+        @media(max-width: 400px){
+            .container-left{
+                padding: 1rem;
+            }
+            .form-title{
+                font-size: 17px;
+            }
+            .label-heading{
+                font-size: 13px;
+            }
+            .form-row{
+                display: block;;
+            }
+            .checkbox-group{
+                justify-content: center;
+            }
+            .clabel{
+                font-size: 0.65rem;
+            }
+            .container-right h2{
+                font-size: 1.15rem;
+            }
+            .contact-card{
+                max-width: 300px;
+            }
+            .contact-card h3{
+                font-size: 1rem;
+            }
+            .contact-card p{
+                font-size: 0.9rem;
+            }
+            .mail a{
+                font-size: 0.9rem;
+            }
+            .mobno{
+                font-size: 0.9rem;
             }
         }
 
