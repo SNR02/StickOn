@@ -1358,6 +1358,19 @@ footer{
     flex-direction: row;
   }
 }
+@media only screen and (max-width: 900px) and (orientation: landscape){
+  .static-nav,
+  .home,
+  .choose-us,
+  .about,
+  .features,
+  .work,
+  .contact,
+  .visit-us,
+  .footer-section{
+    height: auto;
+  }
+}
 
 @media (max-width:780px){
   .home-left .main-content{
@@ -1562,19 +1575,7 @@ footer{
 
 }
 
-@media only screen and (max-width: 500px) and (orientation: landscape){
-  .static-nav,
-  .home,
-  .choose-us,
-  .about,
-  .features,
-  .work,
-  .contact,
-  .visit-us,
-  .footer-section{
-    height: auto;
-  }
-}
+
 
 @media (max-width: 400px){
 
