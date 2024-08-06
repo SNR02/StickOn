@@ -343,7 +343,63 @@ nav .cancel-icon span{
   width: 20%;
 }
 
+/*-----------Tech Stack--------------*/
+.tech-stack{
+  width: 100%;
+  height: auto;
+  padding: 5rem 4rem 0 2rem;
+  margin-top: 2rem;
+}
 
+.ts1 h2{
+  text-align: center;
+  font-weight: 550;
+  color: #DA3960;
+}
+.ts1 p{
+  text-align: center;
+  margin-top:2rem;
+}
+
+.ts2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.ts-card {
+  /* border: 1px solid #ccc; */
+  /* border-radius: 8px; */
+  padding: 20px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+}
+
+.ts-icon {
+  height: 100px;
+  width: 100px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.ts-icon img {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: auto;
+  opacity: 1;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.ts-card span{
+  font-weight: bold;
+}
 
 /*-----------Features--------------*/
 .features{
