@@ -390,10 +390,10 @@
                     <div class="form-container">
                         <form id="contactForm" name="contactForm" class="contactForm">
                             <input type="hidden" name="formType" value="Contact Form">
-                            <input class="contact-input" maxlength="256" name="name" placeholder="Full Name" type="text" id="name">
-                            <input class="contact-input" maxlength="256" name="Email" placeholder="Your Email" type="email" id="Email-6" required="">
-                            <input class="contact-input" maxlength="256" name="Phone-number" placeholder="Your Phone" type="tel" id="Phone-number" required="">
-                            <textarea id="Message" name="Message" maxlength="5000" placeholder="Your Message" class="contact-input"></textarea>
+                            <input class="contact-input" maxlength="256" name="name" placeholder="Full Name" type="text" id="name" required>
+                            <input class="contact-input" maxlength="256" name="Email" placeholder="Your Email" type="email" id="Email-6" required>
+                            <input class="contact-input" maxlength="256" name="Phone-number" placeholder="Your Phone" type="tel" id="Phone-number" required>
+                            <textarea id="Message" name="Message" maxlength="5000" placeholder="Your Message" class="contact-input" required></textarea>
                             <input type="submit" data-wait="Please wait..." class="submitBtn" value="Send Message" data-aos="zoom-in">
                         </form>
                         <div class="form-success" tabindex="-1" role="region">
@@ -447,7 +447,7 @@
             <p>Stay informed with the latest news and exclusive insights, delivered directly to your inbox, ensuring you never miss a thing.</p>
             <form id="subscribe-form">
                 <input type="hidden" name="formType" value="Subcribe Form">
-                <input type="email" name="email" maxlength="256" placeholder="Enter your email" style="backdrop-filter: blur(10px);" class="subscribe-emailInpt">
+                <input type="email" name="email" maxlength="256" placeholder="Enter your email" style="backdrop-filter: blur(10px);" class="subscribe-emailInpt" required>
                 <!-- <input type="submit" class="subscribe-btn"> -->
                  <button type="submit" class="subscribe-btn">
                     <i class="fa-solid fa-paper-plane"></i>
